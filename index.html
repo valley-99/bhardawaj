@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <title>PANKAJ BHARDWAJ</title>
+    <meta name="description" content="Join Our Telegram Channel Now.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: radial-gradient(circle at 20% 10%, #1b2a4a 0%, #0b1120 45%, #05070d 100%);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Poppins', 'Roboto', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 16px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* floating glow blobs */
+        body::before,
+        body::after {
+            content: "";
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(90px);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        body::before {
+            width: 320px;
+            height: 320px;
+            background: rgba(0, 200, 255, 0.25);
+            top: -80px;
+            left: -80px;
+            animation: float1 12s ease-in-out infinite;
+        }
+
+        body::after {
+            width: 300px;
+            height: 300px;
+            background: rgba(0, 255, 170, 0.18);
+            bottom: -90px;
+            right: -70px;
+            animation: float2 14s ease-in-out infinite;
+        }
+
+        @keyframes float1 {
+
+            0%,
+            100% {
+                transform: translate(0, 0);
+            }
+
+            50% {
+                transform: translate(40px, 30px);
+            }
+        }
+
+        @keyframes float2 {
+
+            0%,
+            100% {
+                transform: translate(0, 0);
+            }
+
+            50% {
+                transform: translate(-40px, -30px);
+            }
+        }
+
+        .card {
+            position: relative;
+            z-index: 1;
+            max-width: 100%;
+            width: 100%;
+            background: rgba(12, 18, 32, 0.72);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border-radius: 28px;
+            border: 1px solid rgba(0, 229, 255, 0.18);
+            box-shadow:
+                0 0 0 1px rgba(255, 255, 255, 0.03) inset,
+                0 30px 60px -15px rgba(0, 0, 0, 0.9),
+                0 0 45px rgba(0, 200, 255, 0.08);
+            overflow: hidden;
+        }
+
+        /* top accent line */
+        .card::before {
+            content: "";
+            display: block;
+            height: 4px;
+            background: linear-gradient(90deg, #00e5ff, #00ffa3, #00e5ff);
+            background-size: 200% 100%;
+            animation: slide 4s linear infinite;
+        }
+
+        @keyframes slide {
+            0% {
+                background-position: 0% 0;
+            }
+
+            100% {
+                background-position: 200% 0;
+            }
+        }
+
+        .content {
+            padding: 26px 20px 34px;
+        }
+
+        /* header */
+        .channel-badge {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .logo-circle {
+            width: 70px;
+            height: 70px;
+            border-radius: 20px;
+            overflow: hidden;
+            background: #0d1526;
+            border: 2px solid rgba(0, 229, 255, 0.5);
+            box-shadow: 0 0 22px rgba(0, 229, 255, 0.35);
+            flex-shrink: 0;
+            transform: rotate(-3deg);
+            transition: transform .3s ease;
+        }
+
+        .logo-circle:hover {
+            transform: rotate(0deg) scale(1.05);
+        }
+
+        .logo-circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .channel-name h2 {
+            font-size: 1.55rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #ffffff 0%, #00e5ff 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            letter-spacing: -0.4px;
+            line-height: 1.15;
+        }
+
+        .channel-name p {
+            color: #7b8aa3;
+            font-size: 0.75rem;
+            margin-top: 7px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+
+        .verified {
+            background: rgba(0, 255, 163, 0.1);
+            padding: 3px 10px;
+            border-radius: 30px;
+            font-size: 0.62rem;
+            color: #00ffa3;
+            font-weight: 700;
+            border: 1px solid rgba(0, 255, 163, 0.25);
+        }
+
+        /* buttons */
+        .join-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            background: linear-gradient(135deg, #00b8d9 0%, #00e5ff 55%, #00ffa3 100%);
+            background-size: 200% 200%;
+            border: none;
+            padding: 16px 12px;
+            font-size: 1.05rem;
+            font-weight: 800;
+            color: #04121a;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 16px;
+            transition: all .25s ease;
+            box-shadow: 0 10px 25px -6px rgba(0, 229, 255, 0.5);
+            letter-spacing: 0.4px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            animation: shine 5s ease infinite;
+        }
+
+        @keyframes shine {
+
+            0%,
+            100% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .join-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 14px 32px -6px rgba(0, 229, 255, 0.65);
+        }
+
+        .join-btn:active {
+            transform: scale(0.97);
+        }
+
+        .top-button {
+            margin-bottom: 22px;
+        }
+
+        .bottom-button {
+            margin-top: 26px;
+            margin-bottom: 8px;
+        }
+
+        /* points */
+        .points-section {
+            background: rgba(255, 255, 255, 0.025);
+            border-radius: 20px;
+            padding: 18px 16px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            position: relative;
+        }
+
+        .points-section::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 16px;
+            bottom: 16px;
+            width: 3px;
+            border-radius: 3px;
+            background: linear-gradient(180deg, #00e5ff, #00ffa3);
+        }
+
+        .point-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 14px;
+            padding: 4px 0 4px 10px;
+        }
+
+        .point-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .point-icon {
+            font-size: 20px;
+            min-width: 34px;
+            height: 34px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 229, 255, 0.08);
+            border-radius: 10px;
+            border: 1px solid rgba(0, 229, 255, 0.15);
+        }
+
+        .point-text {
+            color: #d6e2f0;
+            font-size: 0.88rem;
+            font-weight: 500;
+        }
+
+        .point-text strong {
+            color: #ffffff;
+            font-weight: 700;
+        }
+
+        /* disclaimer */
+        .disclaimer {
+            background: rgba(255, 200, 0, 0.06);
+            border-left: 3px solid #ffcc00;
+            padding: 12px 14px;
+            margin-top: 18px;
+            border-radius: 12px;
+            font-size: 0.71rem;
+            line-height: 1.55;
+            color: #b9a97a;
+            font-weight: 500;
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.12), transparent);
+            margin: 20px 0 12px;
+        }
+
+        .footer-text {
+            text-align: center;
+            font-size: 0.65rem;
+            color: #4b586e;
+            margin-top: 8px;
+        }
+
+        @media (max-width:480px) {
+            .content {
+                padding: 22px 16px 30px;
+            }
+
+            .channel-name h2 {
+                font-size: 1.35rem;
+            }
+
+            .logo-circle {
+                width: 60px;
+                height: 60px;
+                border-radius: 16px;
+            }
+
+            .join-btn {
+                padding: 15px 10px;
+                font-size: 0.98rem;
+            }
+
+            .point-text {
+                font-size: 0.84rem;
+            }
+        }
+
+        @media (min-width:500px) {
+            .card {
+                max-width: 460px;
+            }
+        }
+    </style>
+
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1130637679311338');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=1130637679311338&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
+</head>
+
+<body>
+
+    <div class="card">
+        <div class="content">
+            <!-- Logo + Channel Name -->
+            <div class="channel-badge">
+                <div class="logo-circle">
+                    <img src="profile.jpg" alt="PANKAJ BHARDWAJ">
+                </div>
+                <div class="channel-name">
+                    <h2>PANKAJ BHARDWAJ</h2>
+                    <p>📈 Stock Market Analyst <span class="verified">✔ VERIFIED</span></p>
+                </div>
+            </div>
+
+            <!-- BUTTON 1 - TOP -->
+            <div class="top-button">
+                <a id="topJoinBtn" href="https://telegram.me/+-s88hY-dNHA5MTk1" target="_blank" rel="noopener"
+                    class="join-btn">
+                    🚀 JOIN TELEGRAM CHANNEL
+                </a>
+            </div>
+
+            <!-- Points Section -->
+            <div class="points-section">
+                <div class="point-item">
+                    <span class="point-icon">📊</span>
+                    <span class="point-text"><strong>Daily market analysis & trade ideas</strong></span>
+                </div>
+                <div class="point-item">
+                    <span class="point-icon">📞</span>
+                    <span class="point-text"><strong>Regular updates during market hours</strong></span>
+                </div>
+                <div class="point-item">
+                    <span class="point-icon">📚</span>
+                    <span class="point-text"><strong>Educational content on options trading</strong></span>
+                </div>
+                <div class="point-item">
+                    <span class="point-icon">⏱️</span>
+                    <span class="point-text"><strong>Live Market Updates</strong></span>
+                </div>
+            </div>
+
+            <!-- BUTTON 2 - BOTTOM -->
+            <div class="bottom-button">
+                <a id="bottomJoinBtn" href="https://telegram.me/+-s88hY-dNHA5MTk1" target="_blank" rel="noopener"
+                    class="join-btn">
+                    🚀 JOIN TELEGRAM CHANNEL
+                </a>
+            </div>
+
+            <div class="disclaimer">
+                ⚠️ Trading in the stock market involves risk of loss. Content shared is for educational purposes only
+                and is not investment advice. Past performance does not guarantee future results. Please consult a
+                SEBI-registered advisor and do your own research before trading.
+            </div>
+
+            <hr />
+            <div class="footer-text">
+                📍 PANKAJ BHARDWAJ | Educational Market Content Only
+            </div>
+            <div class="footer-text" style="margin-top:6px;">
+                Advertised by <a href="#" target="_blank" rel="noopener"
+                    style="color:#00e5ff; text-decoration:none; font-weight:600;">Shivi Adds</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
